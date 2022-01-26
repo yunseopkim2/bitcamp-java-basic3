@@ -6,7 +6,7 @@ import java.util.Scanner;
  * fileName   : CalcDemo
  * author     : kimyunseop
  * date       : 2022-01-24
- * desc       : 계산기 앱을 실행하는 컨트롤러
+ * desc       : 4칙 계산기 앱을 실행하는 컨트롤러
  * ================================
  * DATE      AUTHOR        NOTE
  * ================================

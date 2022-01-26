@@ -24,6 +24,6 @@ public class LoginDemo {
         System.out.println("Name");
         String name = scanner.next();
         String res = loginApp.login(id, pw, name);
-        System.out.println("res");
+        System.out.println(res);
     }
 }
