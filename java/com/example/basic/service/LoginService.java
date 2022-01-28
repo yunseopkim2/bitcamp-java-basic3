@@ -2,6 +2,8 @@ package com.example.basic.service;
 
 import com.example.basic.domain.LoginDTO;
 
+import static com.example.basic.domain.LoginDTO.PASSWORD;
+
 /**
  * packageName: login
  * fileName   : LoginDemo
@@ -15,7 +17,7 @@ import com.example.basic.domain.LoginDTO;
  */
 public class LoginService {
     public String getLogin(LoginDTO login){
-        return (login.getPw().equals(login.getPw())) ? String.format("%s님의 비번 %s 가 맞습니다. 로그인 성공", login.getName(), login.getPw())
+        return (login.getPw().equals(PASSWORD)) ? String.format("%s님 환영합니다. 로그인 성공", login.getName())
                 : String.format("%s님의 비번 %s 가 틀립니다. 로그인 실패", login.getId() , login.getPw());
     }
 }
