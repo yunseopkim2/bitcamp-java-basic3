@@ -1,4 +1,4 @@
-package kakao;
+package com.example.basic.kakao;
 /**
  * packageName: kakao
  * fileName   : KakaoApp

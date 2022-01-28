@@ -1,4 +1,4 @@
-package bmi;
+package com.example.basic.domain;
 
 /**
  * packageName: bmi
@@ -16,19 +16,32 @@ package bmi;
  * ================================
  * 2022-01-25   yunseopkim        최초 생성
  */
-public class BmiAPP {
+public class BmiDTO {
     public static String BMI_APP = "BMI";
 
-    private String 이름;
-    private Double num1;
-    private Double num2;
+    private String name;
+    private int num1;
+    private int num2;
 
-    public String Bmi(String 이름, Double num1, Double num2){
-        this.이름 = 이름;
-        this.num1 = 0.0;
-        this.num2 = 0.0;
 
-        String res = String.format(" %s님 정상입니다.", this.이름, this.num1, this.num2);
-        return res;
+    public String getName(){
+        return name;
     }
+    public void setName(String name){
+        this.name = name;
+    }
+    public int getNum1(){
+        return num1;
+    }
+    public void setNum1(int num1){
+        this.num1 = num1;
+    }
+    public int getNum2(){
+        return num2;
+    }
+    public void setNum2(int num2){
+        this.num2 = num2;
+    }
+
+
 }

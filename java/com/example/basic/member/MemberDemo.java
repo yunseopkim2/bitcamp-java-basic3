@@ -1,4 +1,4 @@
-package member;
+package com.example.basic.member;
 
 import java.util.Scanner;
 

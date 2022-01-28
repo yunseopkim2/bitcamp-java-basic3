@@ -1,4 +1,4 @@
-package hello;
+package com.example.basic.hello;
 /**
  * packageName: hello
  * fileName   : HelloApp

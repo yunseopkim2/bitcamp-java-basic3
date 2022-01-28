@@ -1,4 +1,4 @@
-package calc;
+package com.example.basic.domain;
 /**
  * *//**
  * packageName: calc
@@ -11,18 +11,39 @@ package calc;
  * ================================
  * 2022-01-24   yunseopkim        최초 생성
  */
-public class CaclApp {
+public class CaclDTO {
+
     public static String CALC_APP = "계산기";
+
     private int num1;
     private String opcode;
     private int num2;
 
-    public String calc(int num1, String opcode, int num2) {
+    public int getNum1(){
+        return num1;
+    }
+    public void setNum1(int num1){
         this.num1 = num1;
+    }
+    public String getOpcode(){
+        return opcode;
+    }
+    public void setOpcode(String opcode){
         this.opcode = opcode;
+    }
+    public int getNum2(){
+        return num2;
+    }
+    public void setNum2(int num2){
         this.num2 = num2;
-        int res = 0;
-        /*
+    }
+
+    }
+
+
+
+
+      /*
         if(opcode.equals("+")){
             res = this.num1 + this.num2;
         }else if(opcode.equals("-")){
@@ -32,24 +53,3 @@ public class CaclApp {
         }else if(opcode.equals("/")){
                 res = this.num1 / this.num2;
         }*/
-        switch (opcode) {
-            case "+":
-                res = this.num1 + this.num2;
-                break;
-            case "-":
-                res = this.num1 - this.num2;
-                break;
-            case "*":
-                res = this.num1 * this.num2;
-                break;
-            case "/":
-                res = this.num1 / this.num2;
-                break;
-        }
-
-
-        String result = String.format("%d %s %d = %d ",
-                this.num1, this.opcode, this.num2, res);
-        return result;
-    }
-    }

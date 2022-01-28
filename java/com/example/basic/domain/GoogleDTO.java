@@ -1,4 +1,4 @@
-package google;
+package com.example.basic.domain;
 
 /**
  * packageName: google
@@ -16,18 +16,17 @@ package google;
  * ================================
  * 2022-01-25   yunseopkim        최초 생성
  */
-public class GoogleApp {
-    static String GOOGLE_APP = "GOOGLE";
+public class GoogleDTO {
+    public static String GOOGLE_APP = "GOOGLE";
 
     private String search;
 
-    public String google(String search){
-
-        this.search = search;
-        String res = "%s을(를) 검색한 결과입니다.";
-
-        return String.format(res, this.search);
-
+    public String getSearch(){
+        return search;
     }
+    public void setSearch(String search){
+        this.search = search;
+    }
+
 
 }
