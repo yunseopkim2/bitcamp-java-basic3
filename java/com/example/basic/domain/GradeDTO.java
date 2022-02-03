@@ -31,11 +31,14 @@ package com.example.basic.domain;
  */
 public class GradeDTO {
         public static String GRADE_TITLE = "성적표";
+        private int count;
         private String name;
         private int kor;
         private int eng;
         private int math;
 
+        public int getCount(){return count;}
+        public void setCount(int count){this.count = count;}
         public String getName(){
             return name;
         }

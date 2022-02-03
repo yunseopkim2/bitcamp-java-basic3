@@ -29,7 +29,7 @@ public class DemoController {
         Scanner scanner = new Scanner(System.in);
         BmiDTO bmi = new BmiDTO();
         BmiService bmiService = new BmiService();
-        CaclDTO cacl = new CaclDTO();
+        CaclDTO calc = new CaclDTO();
         CalcService calcService = new CalcService();
         GoogleDTO google = new GoogleDTO();
         GoogleService googleService = new GoogleService();
@@ -53,15 +53,17 @@ public class DemoController {
                     res = bmiService.getBmi(bmi);break;
                 case "2":
                     System.out.println(CaclDTO.CALC_APP +"\n숫자1, 연산자, 숫자2 입력");
-                    cacl.setNum1(scanner.nextInt());
-                    cacl.setOpcode(scanner.next());
-                    cacl.setNum2(scanner.nextInt());
-                    res = calcService.getCalc(cacl);break;
+                    calc.setNum1(scanner.nextInt());
+                    calc.setOpcode(scanner.next());
+                    calc.setNum2(scanner.nextInt());
+                    res = calcService.getCalc(calc);break;
                 case "3":
                     System.out.println(GoogleDTO.GOOGLE_APP +"\n검색");
                     google.setSearch(scanner.next());
                     res = googleService.getGoogle(google);break;
                 case "4":
+                    System.out.println("학생 수는 몇명입니까?");
+                    grade.setCount(scanner.nextInt());
                     System.out.println(GradeDTO.GRADE_TITLE +"\n이름, 국어, 영어, 수학");
                     grade.setName(scanner.next());
                     grade.setKor(scanner.nextInt());

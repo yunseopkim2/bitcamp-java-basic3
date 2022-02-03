@@ -17,7 +17,9 @@ import static com.example.basic.domain.LoginDTO.PASSWORD;
  */
 public class LoginService {
     public String getLogin(LoginDTO login){
-        return (login.getPw().equals(PASSWORD)) ? String.format("%s님 환영합니다. 로그인 성공", login.getName())
-                : String.format("%s님의 비번 %s 가 틀립니다. 로그인 실패", login.getId() , login.getPw());
+        return (login.getPw().equals(PASSWORD)) ?
+                String.format("%s님 환영합니다. 로그인 성공", login.getName())
+                :
+                String.format("%s님의 비번 %s 가 틀립니다. 로그인 실패", login.getId() , login.getPw());
     }
 }
