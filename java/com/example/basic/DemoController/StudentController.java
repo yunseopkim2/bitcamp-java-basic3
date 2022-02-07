@@ -39,10 +39,10 @@ public class StudentController {
                 case "0" :
                     System.out.println("Exit"); return;
                 case "1":
-                    System.out.println(BmiDTO.BMI_APP +"\n이름, 몸무게, 키");
+                    System.out.println(BmiDTO.BMI_APP +"\n이름, 키, 몸무게");
                     bmi.setName(scanner.next());
-                    bmi.setNum1(scanner.nextInt());
-                    bmi.setNum2(scanner.nextInt());
+                    bmi.setTall(scanner.nextInt());
+                    bmi.setWeight(scanner.nextInt());
                     res = Service .getBmi(bmi);break;
                 case "2":
                     System.out.println(CaclDTO.CALC_APP +"\n숫자1, 연산자, 숫자2 입력");
