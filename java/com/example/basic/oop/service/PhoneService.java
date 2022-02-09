@@ -1,4 +1,9 @@
-package com.example.basic.phone.service;
+package com.example.basic.oop.service;
+
+import com.example.basic.oop.domain.CelPhone;
+import com.example.basic.oop.domain.GalPhone;
+import com.example.basic.oop.domain.IPhone;
+import com.example.basic.oop.domain.Phone;
 
 import java.util.Scanner;
 
@@ -14,9 +19,9 @@ import java.util.Scanner;
  * 2022-02-08   yunseopkim        최초 생성
  */
 public interface PhoneService{
-    void usePhone(Scanner scanner);
-    void useCelPhone(Scanner scanner);
-    void useIPhone(Scanner scanner);
-    void useGalPhone(Scanner scanner);
+    void usePhone(Phone phone);
+    void useCelPhone(CelPhone phone);
+    void useIPhone(IPhone phone);
+    void useGalPhone(GalPhone phone);
 }
 

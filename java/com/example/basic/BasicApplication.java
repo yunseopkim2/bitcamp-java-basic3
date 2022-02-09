@@ -1,6 +1,7 @@
 package com.example.basic;
 
-import com.example.basic.phone.controller.PhoneController;
+import com.example.basic.oop.controller.OopController;
+import com.example.basic.oop2.controller.OopController1;
 import com.example.basic.quiz.controller.QuizController;
 import com.example.basic.member.controller.MemberController;
 import org.springframework.boot.SpringApplication;
@@ -14,9 +15,10 @@ public class BasicApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(BasicApplication.class, args);
 		Scanner scanner = new Scanner(System.in);
-		PhoneController phoneController = new PhoneController();
+		OopController phoneController = new OopController();
 		QuizController quizController = new QuizController();
 		MemberController memberController = new MemberController();
+		OopController1 phoneController1 = new OopController1();
 		while (true){
 			System.out.println("Menu\n"+"0.Exit"+" 1.Member"+" 2.Phone"+" 3.Quiz"+" 4.Algorithm");
 			switch (scanner.next()){
@@ -31,7 +33,9 @@ public class BasicApplication {
 					System.out.println("### Quiz ###");
 					quizController.execute(scanner);break;
 				case "4" :
-					System.out.println("### Algorithm ###");break;
+					System.out.println("### Algorithm ###");
+					phoneController1.execute1(scanner);
+					break;
 
 				default: System.out.println("Wrong Number");break;
 			}
