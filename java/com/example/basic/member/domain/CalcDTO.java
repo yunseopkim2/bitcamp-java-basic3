@@ -11,13 +11,16 @@ package com.example.basic.member.domain;
  * ================================
  * 2022-01-24   yunseopkim        최초 생성
  */
-public class CaclDTO {
+public class CalcDTO {
 
-    public static String CALC_APP = "계산기";
+    public static String CALC_TITLE = "계산기";
 
     private int num1;
     private String opcode;
     private int num2;
+
+
+
 
     public int getNum1(){
         return num1;

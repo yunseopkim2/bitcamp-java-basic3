@@ -37,6 +37,12 @@ public class GradeDTO {
         private int eng;
         private int math;
 
+        private final static GradeDTO gradeDTO = new GradeDTO();
+        private GradeDTO(){}
+        public static GradeDTO getInstance(){
+            return gradeDTO;
+        }
+
         public int getCount(){return count;}
         public void setCount(int count){this.count = count;}
         public String getName(){

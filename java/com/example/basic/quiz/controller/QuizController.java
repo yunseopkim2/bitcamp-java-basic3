@@ -21,6 +21,7 @@ public class QuizController {
         Feb6Service feb6Service = new Feb06ServiceImpl();
         Feb07Service feb07Service = new Feb07ServiceImpl();
         Feb08Service feb08Service = new Feb08ServiceImpl();
+        Feb10Service feb10Service = new Feb10ServiceImpl();
 
         while(true) {
             System.out.println("0.Exit 1)2월6일 2)2월7일 3)2월8일 4)2월9일");
@@ -107,7 +108,43 @@ public class QuizController {
                     break;
 
                 case "4":
-                    System.out.println("2월9일");
+                    System.out.println("2월10일");
+                    System.out.println("[소메뉴]\n 0.Exit 1.bubbleSort 2.insertionSort " +
+                            "3.selectionSort 4.quickSort 5.mergeSort 6.magicSquare 7.zigzag 8.rectangleStarPrint 9.triangleStarPrint");
+                    switch (scanner.next()){
+                        case "0":
+                            System.out.println("### 종료 ###");return;
+                        case "1":
+                            System.out.println("### 1.bubbleSort ###");
+                            feb10Service.bubbleSort(scanner);break;
+                        case "2":
+                            System.out.println("### 2.insertionSort ###");
+                            feb10Service.insertionSort(scanner);break;
+                        case "3":
+                            System.out.println("### 3.selectionSort ###");
+                            feb10Service.selectionSort(scanner);break;
+                        case "4":
+                            System.out.println("### 4.quickSort ###");
+                            feb10Service.quickSort(scanner);break;
+                        case "5":
+                            System.out.println("### 5.mergeSort ###");
+
+                            feb10Service.mergeSort(scanner);break;
+                        case  "6":
+                            System.out.println("### 6.magicSquare ###");
+                            feb10Service.magicSquare(scanner);break;
+                        case  "7":
+                            System.out.println("### 7.zigzag ###");
+                            feb10Service.zigzag(scanner);break;
+                        case  "8":
+                            System.out.println("### 8.rectangleStarPrint ###");
+                            feb10Service.rectangleStarPrint(scanner);break;
+                        case  "9":
+                            System.out.println("### 9.triangleStarPrint ###");
+                            feb10Service.triangleStarPrint(scanner);break;
+                        default:
+                            System.out.println("Wrong Number"); break;
+                    }
 
                 default: System.out.println("잘못된 입력입니다.");break;
 

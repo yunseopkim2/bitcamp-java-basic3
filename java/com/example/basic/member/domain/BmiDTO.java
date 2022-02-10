@@ -16,12 +16,18 @@ package com.example.basic.member.domain;
  * ================================
  * 2022-01-25   yunseopkim        최초 생성
  */
-public class BmiDTO extends Object{
+public class BmiDTO{
     public static String BMI_APP = "BMI";
 
     private String name;
     private double tall;
     private double weight;
+
+    private final static BmiDTO bmiDTO = new BmiDTO();
+    private BmiDTO(){}
+    public static BmiDTO getInstance(){
+        return bmiDTO;
+    }
 
 
     public String getName() {

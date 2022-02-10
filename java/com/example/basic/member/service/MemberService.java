@@ -15,8 +15,8 @@ import com.example.basic.member.domain.*;
  */
 public interface MemberService {
     String getBmi( BmiDTO bmi);
-    String getCalc(CaclDTO calc);
+    String getCalc(CalcDTO calc);
     String getGoogle(GoogleDTO google);
     String getGrade(GradeDTO grade);
-    String getLogin(LoginDTO login);
+    String getLogin(UserDTO login);
 }

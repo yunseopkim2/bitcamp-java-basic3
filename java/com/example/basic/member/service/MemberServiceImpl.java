@@ -2,7 +2,7 @@ package com.example.basic.member.service;
 
 import com.example.basic.member.domain.*;
 
-import static com.example.basic.member.domain.LoginDTO.PASSWORD;
+import static com.example.basic.member.domain.UserDTO.PASSWORD;
 
 /**
  * packageName: com.example.basic.service
@@ -30,6 +30,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public String getBmi(BmiDTO bmi) {
 
+
         double BMI = bmi.getWeight() / (bmi.getTall() * bmi.getTall()) * 10000;
         String s = "";
         if (BMI >= 35) {
@@ -50,7 +51,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public String getCalc(CaclDTO calc) {
+    public String getCalc(CalcDTO calc) {
         int res = 0;
         switch (calc.getOpcode()) {
             case "+":
@@ -97,7 +98,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public String getLogin(LoginDTO login) {
+    public String getLogin(UserDTO login) {
         return (login.getPw().equals(PASSWORD)) ?
                 String.format("%s님 환영합니다. 로그인 성공", login.getName())
                 :
