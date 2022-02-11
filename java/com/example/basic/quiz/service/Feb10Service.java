@@ -25,7 +25,7 @@ public interface Feb10Service {
     // 1인
     void magicSquare(Scanner scanner);
     // 1인
-    void zigzag(Scanner scanner);
+    void zigzag();
     // 1인
     // 좌측90도 직각삼각형 별찍기
     void rectangleStarPrint(Scanner scanner);

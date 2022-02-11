@@ -24,7 +24,7 @@ public class QuizController {
         Feb10Service feb10Service = new Feb10ServiceImpl();
 
         while(true) {
-            System.out.println("0.Exit 1)2월6일 2)2월7일 3)2월8일 4)2월9일");
+            System.out.println("0.Exit 1)2월6일 2)2월7일 3)2월8일 4)2월10일");
             switch (scanner.next()) {
                 case "0":
                     System.out.println("### Exit ###");return;
@@ -135,7 +135,7 @@ public class QuizController {
                             feb10Service.magicSquare(scanner);break;
                         case  "7":
                             System.out.println("### 7.zigzag ###");
-                            feb10Service.zigzag(scanner);break;
+                            feb10Service.zigzag();break;
                         case  "8":
                             System.out.println("### 8.rectangleStarPrint ###");
                             feb10Service.rectangleStarPrint(scanner);break;

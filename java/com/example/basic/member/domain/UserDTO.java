@@ -14,11 +14,8 @@ public class UserDTO {
     public static String LOGIN_APP = "로그인";
 
     private final static UserDTO userDTO = new UserDTO();
-
     private UserDTO(){}
-    public static UserDTO getInstance(){
-        return userDTO;
-    }
+    public static UserDTO getInstance(){   return userDTO;}
 
     private String id;
     private String pw;

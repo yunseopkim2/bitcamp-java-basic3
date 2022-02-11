@@ -70,7 +70,8 @@ public class MemberController {
                 u.setPw(scanner.next());
                 u.setName(scanner.next());
                     res = Service .getLogin(u);break;
-                default: res = "잘못된 입력입니다."; break;
+                default:
+                    System.out.println("잘못된 입력입니다.") ; break;
             }
             System.out.println(res);
         }
