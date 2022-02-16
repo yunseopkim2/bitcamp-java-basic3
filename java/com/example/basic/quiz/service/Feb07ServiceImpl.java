@@ -40,30 +40,46 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void rps(Scanner scanner) {
+        int a = (int)(Math.random()*3)+1;
+        int b = (int)(Math.random()*3)+1;
+        System.out.println(a);
+        System.out.println(b);
+        String s = "";
+        if(a==b) s = "Draw";
+        /**
+         * 2%3 2 3
+         * 3%3 0 1
+         * 1%3 1 2
+         * */
+        else s = (b>(a+1)%3) ? "Win" : "Lose";
+        System.out.println(s);
 
     }
-    /*
-     *    author     : 최민서
-     * */
+    /**
+     * author : 최민서
+     * des : 소수가 1을 제외하고 자기자신만을 약수로 가지고 있음을 생각하고 코드 짜기
+     * 약수가 하나인 경우를 찾아 출력
+     */
     @Override
     public void getPrime(Scanner scanner) {
-            System.out.println("두 수를 입력하시오.");
-            System.out.println("num 1");
-            int num1 = scanner.nextInt();
-            System.out.println("num 2");
-            int num2 = scanner.nextInt();
-            int count=0;
-            for(int i = num1; i <= num2; i++) {
-                for(int j=2; j<=i; j++) {
-                    if(i%j ==0) {
-                        count ++;
-                    }
+        System.out.println("두 수를 입력하시오.");
+        System.out.println("num 1");
+        int num1 = scanner.nextInt();
+        System.out.println("num 2");
+        int num2 = scanner.nextInt(); // 범위가 될 두 수를 입력
+        int count=0;
+        for(int i = num1; i <= num2; i++) { // num1 <= num2 일 동안만 반복
+            for(int j=2; j<=i; j++) {
+                if(i%j ==0) {
+                    count ++; //2부터 나누었을 때 나머지가 0일 경우 count++
                 }
-                if(count==1){
-                    System.out.println(i+" ");
-                }
-                count=0;
             }
+            if(count==1){
+                System.out.println(i+" "); // 소수는 약수가 1을 제외하고 본인 만인 수
+                // count ==1인 경우, 1을 제외하고 약수가 자기 자신 하나이므로 출력
+            }
+            count=0; // 각 수마다 약수의 개수를 세기 위해 초기화
+        }
 
     }
     /*
