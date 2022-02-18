@@ -51,7 +51,7 @@ public class Feb07ServiceImpl implements Feb07Service {
          * 3%3 0 1
          * 1%3 1 2
          * */
-        else s = (b>(a+1)%3) ? "Win" : "Lose";
+        else s = (b>(a%3)+1) ? "Win" : "Lose";
         System.out.println(s);
 
     }
